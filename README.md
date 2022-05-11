@@ -36,21 +36,21 @@ We support [MVTec AD dataset](https://www.mvtec.com/de/unternehmen/forschung/dat
 - Run code by selecting category, model (backbone), input size, etc.
 - The commands below should reproduce our reference MVTec results using HRNet-32 extractor:
 ```
-python3 train.py --gpu 0 --cal_pro True --category bottle
-python3 train.py --gpu 0 --cal_pro True --category cable
-python3 train.py --gpu 0 --cal_pro True --category capsule
-python3 train.py --gpu 0 --cal_pro True --category carpet
-python3 train.py --gpu 0 --cal_pro True --category grid
-python3 train.py --gpu 0 --cal_pro True --category hazelnut
-python3 train.py --gpu 0 --cal_pro True --category leather
-python3 train.py --gpu 0 --cal_pro True --category metal_nut
-python3 train.py --gpu 0 --cal_pro True --category pill
-python3 train.py --gpu 0 --cal_pro True --category screw
-python3 train.py --gpu 0 --cal_pro True --category tile
-python3 train.py --gpu 0 --cal_pro True --category toothbrush
-python3 train.py --gpu 0 --cal_pro True --category transistor
-python3 train.py --gpu 0 --cal_pro True --category wood
-python3 train.py --gpu 0 --cal_pro True --category zipper
+python train.py --gpu 0 --cal_pro True --category bottle
+python train.py --gpu 0 --cal_pro True --category cable
+python train.py --gpu 0 --cal_pro True --category capsule
+python train.py --gpu 0 --cal_pro True --category carpet
+python train.py --gpu 0 --cal_pro True --category grid
+python train.py --gpu 0 --cal_pro True --category hazelnut
+python train.py --gpu 0 --cal_pro True --category leather
+python train.py --gpu 0 --cal_pro True --category metal_nut
+python train.py --gpu 0 --cal_pro True --category pill
+python train.py --gpu 0 --cal_pro True --category screw
+python train.py --gpu 0 --cal_pro True --category tile
+python train.py --gpu 0 --cal_pro True --category toothbrush
+python train.py --gpu 0 --cal_pro True --category transistor
+python train.py --gpu 0 --cal_pro True --category wood
+python train.py --gpu 0 --cal_pro True --category zipper
 ```
 
 
