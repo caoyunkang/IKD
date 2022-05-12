@@ -140,10 +140,10 @@ class IKD:
 
         return pixel_level_ROCAUC, pro_auc_score
 
-    def cal_pro_metric(self, labeled_imgs, score_imgs, fpr_thresh=0.3, max_steps=2000, class_name=None):
+    def cal_pro_metric(self, labeled_imgs, score_imgs, fpr_thresh=0.3, max_steps=200, class_name=None):
         labeled_imgs[labeled_imgs <= 0.45] = 0
         labeled_imgs[labeled_imgs > 0.45] = 1
-        labeled_imgs = labeled_imgs.astype(np.bool)
+        labeled_imgs = labeled_imgs.astype(bool)
 
         max_th = score_imgs.max()
         min_th = score_imgs.min()
@@ -155,7 +155,7 @@ class IKD:
         pros_std = []
         threds = []
         fprs = []
-        binary_score_maps = np.zeros_like(score_imgs, dtype=np.bool)
+        binary_score_maps = np.zeros_like(score_imgs, dtype=bool)
         for step in range(max_steps):
             thred = max_th - step * delta
             # segmentation
@@ -511,7 +511,7 @@ def parse_args():
     parser.add_argument('--load_size', type=int, required=False, default=256)
     parser.add_argument('--input_size', type=int, required=False, default=256)
     parser.add_argument('--category', type=str, default='tile')
-    parser.add_argument('--validate_step', type=int, default=10)
+    parser.add_argument('--validate_step', type=int, default=50)
 
     parser.add_argument('--save_images', type=str2bool, default=True)
     parser.add_argument('--cal_pro', type=str2bool, default=True)
