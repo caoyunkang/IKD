@@ -1,11 +1,8 @@
 import matplotlib
 
 matplotlib.use("Agg")
-import cv2
 from skimage import measure
 from sklearn.metrics import auc
-import pickle
-from tqdm import tqdm
 from sklearn.metrics import roc_curve
 from sklearn.metrics import precision_recall_curve
 import matplotlib.pyplot as plt
@@ -19,7 +16,6 @@ import numpy as np
 import os
 from PIL import Image
 from sklearn.metrics import roc_auc_score
-import json
 import shutil
 from torch.utils.tensorboard import SummaryWriter
 from models.model import School
@@ -62,14 +58,14 @@ class IKD:
         # prepare transforms
         self.data_transforms = transforms.Compose([
             transforms.Resize((args.load_size, args.load_size), Image.ANTIALIAS),
-            transforms.ToTensor(),
             transforms.CenterCrop(args.input_size),
+            transforms.ToTensor(),
             transforms.Normalize(mean=mean_train,
                                  std=std_train)])
         self.gt_transforms = transforms.Compose([
             transforms.Resize((args.load_size, args.load_size), Image.NEAREST),
-            transforms.ToTensor(),
-            transforms.CenterCrop(args.input_size)])
+            transforms.CenterCrop(args.input_size),
+            transforms.ToTensor(),])
         self.inv_normalize = transforms.Normalize(mean=mean_train,
                                                   std=std_train)
 
