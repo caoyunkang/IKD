@@ -1,4 +1,4 @@
-[![PWC](https://img.shields.io/badge/Anomaly%20Segmentation%20on%20MVTec-%23Ranked%206-green)](https://paperswithcode.com/paper/informative-knowledge-distillation-for-image)
+[comment]: <> ([![PWC]&#40;https://img.shields.io/badge/Anomaly%20Segmentation%20on%20MVTec-%23Ranked%206-green&#41;]&#40;https://paperswithcode.com/paper/informative-knowledge-distillation-for-image&#41;)
 
 ## Informative knowledge distillation for image anomaly segmentation
 [Knowledge-based Systems 2022](https://www.sciencedirect.com/science/article/abs/pii/S0950705122004038?msclkid=230bf4ccd12e11eca82e856ea4021892)
